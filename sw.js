@@ -36,6 +36,10 @@ fetch(request, {mode: 'no-cors'})
   console.log('Request failed', error)  
 });
 
+if (typeof idb === "undefined") {
+        self.importScripts('js/idb.js');
+    }
+
 self.addEventListener('fetch', function (event) {
     const CACHE_NAME = 'Restaurants';
     event.respondWith(
