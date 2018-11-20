@@ -1,52 +1,38 @@
-# Local Development API Server
-## Usage
-#### Get Restaurants
-```
-curl "http://localhost:1337/restaurants"
-```
-#### Get Restaurants by id
-````
-curl "http://localhost:1337/restaurants/{3}"
-````
+# MWS Project 2 - Dynamic & Offline Capable Web Apps
 
-## Architecture
-Local server
-- Node.js
-- Sails.js
+## Goal of the Project
+In project 1 we built a responsive, accessible design that now needs to be connected to an external server.
+We begin by using asynchronous JavaScript to request JSON data from the backend server. Received data from the server is then stored in an offline database using IndexedDB, which will create an app shell architecture.
+The site will be optimized to meet performance benchmarks, which are tested using [Lighthouse](https://developers.google.com/web/tools/lighthouse/).
 
-## Contributors
+A [Node development server](https://github.com/udacity/mws-restaurant-stage-2) and API is already provided to make JSON requests to the server.
+Core functionality of the application will not change, only the source of the data will change. We're using the Fetch API to make requests to the backend server to populate the content of our PWA.
 
-- [Brandy Lee Camacho - Technical Project Manager](mailto:brandy.camacho@udacity.com)
-- [David Harris - Web Services Lead](mailto:david.harris@udacity.com)
-- [Omar Albeik - Frontend engineer](mailto:omaralbeik@gmail.com)
+## Project Requirements
+* Use server data instead of local memory.
+* Use IndexedDB to cache JSON responses.
+* Minimum performance requirements.
+  * Performance: 70 or better.
+  * Progressive Web App: 90 or better.
+  * Accessibility: 90 or better.
+
+## Official Style Guide
+This code adheres to the [Udacity Frontend Nanodegree Style Guide](https://udacity.github.io/frontend-nanodegree-styleguide/).
 
 ## Getting Started
+Make sure the [Node development server](https://github.com/udacity/mws-restaurant-stage-2) is running.
 
-### Development local API Server
-_Location of server = /server_
-Server depends on [node.js LTS Version: v6.11.2 ](https://nodejs.org/en/download/), [npm](https://www.npmjs.com/get-npm), and [sails.js](http://sailsjs.com/)
-Please make sure you have these installed before proceeding forward.
+Clone or download the repository.
+Start up an HTTP server, you can use Python or Chrome extension [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en).
 
-Great, you are ready to proceed forward; awesome!
+Example using Python:
 
-Let's start with running commands in your terminal, known as command line interface (CLI)
-
-###### Install project dependancies
-```Install project dependancies
-# npm i
 ```
-###### Install Sails.js globally
-```Install sails global
-# npm i sails -g
+pipenv --python 3.6
+pipenv run python -m http.server 8887
 ```
-###### Start the server
-```Start server
-# node server
-```
-### You should now have access to your API server environment
-debug: Environment : development
-debug: Port        : 1337
 
+Open url [localhost:8887](localhost:8887) in your favorite browser.
 
-If you find a bug in the source code or a mistake in the documentation, you can help us by
-submitting an issue to our [Waffle Dashboard](https://waffle.io/udacity/mwnd-issues). Even better you can submit a Pull Request with a fix :)
+## Where can I learn more?
+Follow the awesome [Udacity Mobile Web Specialist Nanodegree](https://www.udacity.com/course/mobile-web-specialist-nanodegree--nd024)!
