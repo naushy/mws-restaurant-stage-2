@@ -1,10 +1,10 @@
 {
   "short_name": "RestoReviews",
-  "name": "MWS Restaurant Reviews",
+  "name": "Jodhpur Restaurant Reviews",
   "description": "Mobile Web Specialist Nanodegree - Restaurant Reviews App",
   "start_url": "/index.html",
-  "theme_color": "#002984",
-  "background_color": "#fafafa",
+  "theme_color": "#FFA500",
+  "background_color": "#ffffff",
   "display": "standalone",
   "icons": [
     {
